@@ -2,11 +2,9 @@ import { env, serve, randomUUIDv7 } from 'bun';
 
 import type { ServerWebSocket } from 'bun';
 
-const PORT = env.PORT ?? 8080;
 const rooms = new Map<string, Map<string, ServerWebSocket>>();
 
 const server = serve<any, {}>({
-	port: PORT,
 	fetch(req, server) {
 		if (server.upgrade(req)) return;
 
