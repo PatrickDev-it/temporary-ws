@@ -1,0 +1,12 @@
+{
+	"version": 1,
+	"env": {
+		"PORT": 8080
+	},
+	"builds": [
+		{
+			"src": "index.ts",
+			"use": "@vercel/bun"
+		}
+	]
+}
